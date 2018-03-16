@@ -14,8 +14,8 @@ VectorXd Tools::CalculateRMSE(const vector<VectorXd> &estimations,
   VectorXd rmse = VectorXd(4);
   rmse << 0, 0, 0, 0;
 
-  cout << "CalculateRMSE" << endl;
-  cout << ground_truth.size() << endl;
+  cout << "CalculateRMSE: " << endl;
+  //cout << ground_truth.size() << endl;
 
   // check the validity of the following inputs:
   //  * the estimation vector size should not be zero
@@ -42,7 +42,7 @@ VectorXd Tools::CalculateRMSE(const vector<VectorXd> &estimations,
   //calculate the squared root
   rmse = rmse.array().sqrt();
 
-//  std::cout << "ground_truth: "; 
+  std::cout << "ground_truth: "; 
   std::cout << ground_truth[0] << endl;
 
   // std::cout << "estimations: "; 
